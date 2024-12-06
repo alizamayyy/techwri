@@ -48,3 +48,5 @@ export default tseslint.config({
   },
 })
 ```
+# techwri
+techwri final project
