@@ -1,0 +1,53 @@
+/* FlippingCard.css */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(-25px);
+        /* Higher bounce */
+    }
+
+    20% {
+        transform: translateY(-20px);
+        /* Slightly lower bounce */
+    }
+
+    30% {
+        transform: translateY(-15px);
+        /* Lower bounce */
+    }
+
+    40% {
+        transform: translateY(-10px);
+        /* Even lower bounce */
+    }
+
+    50% {
+        transform: translateY(-5px);
+        /* Minimal bounce */
+    }
+
+    60% {
+        transform: translateY(-3px);
+        /* Slight lift */
+    }
+
+    70% {
+        transform: translateY(-1px);
+        /* Almost back to original */
+    }
+
+    80% {
+        transform: translateY(0);
+        /* Return to original */
+    }
+}
+
+.bounce-on-hover:hover {
+    animation: bounce 0.5s ease-in-out;
+    /* Bounce on hover */
+}
