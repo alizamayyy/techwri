@@ -150,6 +150,22 @@ export default function App() {
           />
         </div>
       </div>
+      <a
+        href="https://github.com/alizamayyy/techwri"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute bottom-5 right-5 flex items-center" // Use flex to align text and icon
+      >
+        <p className="mr-2 text-white text-bold font-opensans1 text-sm">
+          Bataluna, Aliza May
+        </p>{" "}
+        {/* Text before the icon */}
+        <img
+          src="/github-mark-white.svg" // Path to your SVG file
+          alt="GitHub"
+          className="w-5 h-5 hover:opacity-80 transition-opacity" // Adjust size and hover effect
+        />
+      </a>
     </div>
   );
 }
