@@ -78,6 +78,15 @@
   }
 }
 
+.cursor-effect {
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.cursor-effect:hover {
+  color: rgba(255, 182, 193, 1); /* Darken the text color on hover */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
 /*a {
   font-weight: 500;
   color: #646cff;
