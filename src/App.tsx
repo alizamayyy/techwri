@@ -8,25 +8,25 @@ export default function App() {
       </h1>
       <div className="grid grid-cols-7 gap-10 mt-40">
         <div className="relative translate-y-[-40px]"> {/* Slightly above */}
-          <FlippingCard frontText="Original Side" backText="Flipped Side" />
+          <FlippingCard frontText="Technical Writing" backText="Flipped Side" />
         </div>
         <div className="relative translate-y-[40px]"> {/* Slightly below */}
-          <FlippingCard frontText="Hello 1" backText="Flipped Side" />
+          <FlippingCard frontText="Self-Awareness" backText="Flipped Side" />
         </div>
         <div className="relative translate-y-[-40px]"> {/* Slightly above */}
-          <FlippingCard frontText="Hello 2" backText="Flipped Side" />
+          <FlippingCard frontText="Writing" backText="Flipped Side" />
         </div>
         <div className="relative translate-y-[40px]"> {/* Slightly below */}
-          <FlippingCard frontText="Hello 3" backText="Flipped Side" />
+          <FlippingCard frontText="Communication" backText="Flipped Side" />
         </div>
         <div className="relative translate-y-[-40px]"> {/* Slightly above */}
-          <FlippingCard frontText="Hello 4" backText="Flipped Side" />
+          <FlippingCard frontText="Instructional Video" backText="Flipped Side" />
         </div>
         <div className="relative translate-y-[40px]"> {/* Slightly below */}
-          <FlippingCard frontText="Hello 3" backText="Flipped Side" />
+          <FlippingCard frontText="Application Letter / CV" backText="Flipped Side" />
         </div>
         <div className="relative translate-y-[-40px]"> {/* Slightly above */}
-          <FlippingCard frontText="Hello 4" backText="Flipped Side" />
+          <FlippingCard frontText="Self-Assessment" backText="Flipped Side" />
         </div>
       </div>
     </div>
