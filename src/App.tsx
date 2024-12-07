@@ -1,10 +1,57 @@
+import { useEffect } from "react";
 import FlippingCard from "./FlippingCard";
+import "./index.css"; // Ensure your CSS file is imported
 
 export default function App() {
+  useEffect(() => {
+    const cursor = document.createElement("div");
+    cursor.classList.add("custom-cursor");
+    document.body.appendChild(cursor);
+
+    const createFallingPetal = (x: number, y: number) => {
+      const petal = document.createElement("div");
+      petal.classList.add("flower-petal");
+
+      // Add a random horizontal offset to create a gap effect
+      const offsetX = (Math.random() - 0.5) * 30; // Random offset between -15px and 15px
+      petal.style.left = `${x + offsetX}px`;
+      petal.style.top = `${y}px`;
+      document.body.appendChild(petal);
+
+      // Trigger the falling animation
+      petal.style.animation = "fall 2s forwards"; // Adjust duration to 2 seconds for slower fall
+
+      // Remove the petal after the animation ends
+      petal.addEventListener("animationend", () => {
+        petal.remove();
+      });
+    };
+
+    const updateCursorPosition = (e: MouseEvent) => {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+
+      // Create a new petal at the cursor position
+      createFallingPetal(e.pageX, e.pageY);
+    };
+
+    document.addEventListener("mousemove", updateCursorPosition);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener("mousemove", updateCursorPosition);
+      document.body.removeChild(cursor);
+    };
+  }, []);
   return (
     <div className="ml-10 mr-10 flex flex-col items-center">
-      <h1 className="text-5xl mt-20 font-bold text-center">A journey</h1>
-      <p className="mt-2 text-center">and a few realizations along the way</p>
+      <h1 className="text-8xl mt-20 font-bold text-center font-precious cursor-effect">
+        A journey
+      </h1>
+      <p className="mt-2 text-center italic font-tomatoes cursor-effect">
+        and a few realizations along the way
+      </p>{" "}
+      {/* Using custom font here */}
       <div className="grid grid-cols-7 gap-10 mt-40">
         <div className="relative translate-y-[-40px]">
           {" "}

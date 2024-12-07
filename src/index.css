@@ -27,6 +27,57 @@
   }
 }
 
+@font-face {
+  font-family: 'Precious'; /* Name of your font */
+  src: url('/Precious.ttf') format('truetype'); /* Path to your font file */
+  font-weight: normal; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+@font-face {
+  font-family: 'Tomatoes'; /* Name of your font */
+  src: url('/tomatoes.ttf') format('truetype'); /* Path to your font file */
+  font-weight: normal; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+@font-face {
+  font-family: 'Open Sans'; /* Name of your font */
+  src: url('/opensans.ttf') format('truetype'); /* Path to your font file */
+  font-weight: normal; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+@font-face {
+  font-family: 'Open Sans1'; /* Name of your font */
+  src: url('/opensans1.ttf') format('truetype'); /* Path to your font file */
+  font-weight: normal; /* Adjust as needed */
+  font-style: normal; /* Adjust as needed */
+}
+
+.flower-petal {
+  position: fixed;
+  width: 15px; /* Adjust size as needed */
+  height: 15px; /* Adjust size as needed */
+  background-image: url('flower.png'); /* Replace with your petal image */
+  background-size: cover; /* Ensure the image covers the element */
+  pointer-events: none; /* Prevent interference with mouse events */
+  transform: translate(-50%, -50%); /* Center the petal */
+  transition: opacity 0.5s ease; /* Smooth fade out */
+  z-index: 9998; /* Ensure it appears below the cursor */
+}
+
+@keyframes fall {
+  0% {
+      transform: translate(-50%, -50%) translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, -50%) translateY(50px); /* Adjust fall distance to 50px */
+      opacity: 0; /* Fade out */
+  }
+}
+
 /*a {
   font-weight: 500;
   color: #646cff;
