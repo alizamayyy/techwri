@@ -59,7 +59,7 @@
   position: fixed;
   width: 15px; /* Adjust size as needed */
   height: 15px; /* Adjust size as needed */
-  background-image: url('flower.png'); /* Replace with your petal image */
+  background-image: url('/flower.png'); /* Replace with your petal image */
   background-size: cover; /* Ensure the image covers the element */
   pointer-events: none; /* Prevent interference with mouse events */
   transform: translate(-50%, -50%); /* Center the petal */
